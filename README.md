@@ -1,20 +1,25 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🏺 晓艺 (Xiaoyi) - 陶瓷与材料研发配方管理系统
 
-# Run and deploy your AI Studio app
+晓艺 (Xiaoyi) 是一个专为陶瓷工作室、材料研发人员打造的轻量级全栈管理系统。它能够帮助研发人员系统化地记录配方比例、烧制环境、操作人员以及最终成品效果，并提供一键生成长图分享与数据双重备份功能。
 
-This contains everything you need to run your app locally.
+## ✨ 核心功能
 
-View your app in AI Studio: https://ai.studio/apps/02aa9515-8ba2-491d-8b66-11055f325eb4
+- **🧪 精确的原料配比记录**：支持多种计量单位（%、g、kg、ml、份），自动计算百分比总和并提供视觉提示。
+- **🔥 全流程环境参数追踪**：详细记录成型湿度、窑炉类型（电窑、气窑、柴窑等）、窑炉温度、烧制日期与烧制时间。
+- **📸 研发成果验证与归档**：支持上传最终成品照片，记录产品编号与缺陷分析，完成从“研发”到“成品”的闭环。
+- **🖼️ 一键生成长图**：在已归档的详情页中，支持一键将研发数据与成品照片生成精美的高清长图，方便保存与团队分享。
+- **💾 数据双重安全备份**：底层采用 SQLite 数据库轻量存储，同时在产品归档时，自动在服务器生成独立的 JSON 备份文件，防止数据丢失。
 
-## Run Locally
+## 🛠️ 技术栈
 
-**Prerequisites:**  Node.js
+- **前端**：React 19, Vite, Tailwind CSS, Lucide Icons, Framer Motion, html2canvas
+- **后端**：Node.js, Express
+- **数据库**：SQLite (better-sqlite3)
+- **部署**：PM2 (支持后台常驻运行)
 
+## 🚀 本地开发指南
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. **克隆仓库**
+   ```bash
+   git clone https://github.com/hanjin714/xiaoyi.git
+   cd xiaoyi
